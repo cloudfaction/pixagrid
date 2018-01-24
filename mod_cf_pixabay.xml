@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0" client="site" method="upgrade">
+    <name>Pixabay Grid</name>
+    <author>Maarten Blokdijk</author>
+    <creationDate>January 2018</creationDate>
+    <copyright>Copyright (C) 2018 cloudfaction.nl</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>info@cloudfaction.nl</authorEmail>
+    <authorUrl>www.cloudfaction.nl</authorUrl>
+    <version>1.0</version>
+    <description>Place a pixabay grid, based on user or searchphrase module in a position. By Maarten Blokdijk (info@cloudfaction.nl) Like? Donate on paypal.me/cloudfaction. </description>
+    <files>
+        <filename module="mod_cf_pixabay">mod_cf_pixabay.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_cf_pixabay.xml</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+    <config>
+        <fields name="params">   
+    
+                <fieldset name="basic">
+                    
+                    <field label="&lt;b&gt;Pixabay SETTINGS&lt;/b&gt;&lt;hr/&gt;" type="spacer" class="text"/>
+                     <field name="pixabay_apikey" type="text" filter="raw" default="" label="Api Key" description="API Key (required by Pixabay. When logged on you can get this from pixabay)"></field>
+                    
+                    <field name="pixabay_searchtype" type="list" label="Search for" description="Search for user or searchphrase.">
+					<option	value="1">user</option>
+					<option	value="2">Searchphrase</option>
+				</field>
+                    <field name="pixabay_username" type="text" default="MaartenB" label="Username" description="Shows images from a specific pixabay user. If empty, search phrase is used."></field>
+                    <field name="pixabay_search" type="text" default="" label="Searchphrase" description="A string to search for. Maximum length: 100 characters. Omit to select all images."></field>
+                    <field name="pixabay_rows" type="text" default="3" label="Rows" description="Number of rows to show in your grid"></field>
+                    <field name="pixabay_rowheight" type="text" default="50" label="Row height" description="Maximum height of a row in pixels. Values 30-180."></field>
+                    <field name="pixabay_perpage" type="text" default="50" label="Items on page" description="aximum number of images per next/prev page. Values: 3-100"></field>
+                <field name="pixabay_navpos" type="list" label="Navigation"	description="choose the navigation position">
+					<option value="">No navigation</option>
+					<option	value="bottom">Bottom</option>
+					<option	value="top">top</option>
+				</field>
+                <field name="pixabay_safesearch" type="list" label="Safe Search" description="Use safe-search or not to filter adult content">
+					<option	value="false">No</option>
+					<option	value="true">Yes</option>
+				</field>
+                <field name="pixabay_order" type="list" label="Order your grid" description="How the results should be ordered. Accepted values: popular, latest.">
+					<option	value="popular">Popular</option>
+					<option	value="latest">Latest</option>
+				</field>
+                <field name="pixabay_branding" type="list" label="Branding" description="Show that your grid is powered by Pixabay">
+					<option	value="true">Yes</option>
+					<option	value="false">No</option>
+				</field>
+                    <field name="pixabay_prev" type="text" default="" label="Previous Text" description="Text for the previous link. Leave empty to hide pagination controls."></field>
+                    <field name="pixabay_next" type="text" default="" label="Next Text" description="Text for the next link. Leave empty to hide pagination controls."></field>
+                </fieldset>
+        </fields>
+    </config>
+</extension>
