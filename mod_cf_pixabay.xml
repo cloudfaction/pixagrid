@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="1.0" client="site" method="upgrade">
-    <name>Pixabay Grid: PIXAGRID</name>
+    <name>Pixabay Grid</name>
     <author>Maarten Blokdijk</author>
     <creationDate>January 2018</creationDate>
     <copyright>Copyright (C) 2018 cloudfaction.nl</copyright>
